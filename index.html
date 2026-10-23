@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vithushan Nallanathan | Physics, Astronomy and Science Communication</title>
+<meta name="description" content="Physics graduate, university demonstrator and visiting lecturer. Astrophysics, radioactivity research, science writing and public speaking.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪐</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080C1A; --panel:#10172D; --ink:#E8ECF5; --muted:#8E9AB5; --line:#222C4A;
+  --amber:#F0B04A; --teal:#5CC8C0; --violet:#7C6CF0;
+  --head:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;color:var(--ink);font:400 1.0625rem/1.65 var(--body);
+  background:
+   radial-gradient(1px 1px at 12% 18%,#fff9 50%,transparent 51%),
+   radial-gradient(1px 1px at 78% 8%,#fff7 50%,transparent 51%),
+   radial-gradient(1.5px 1.5px at 90% 62%,#fff8 50%,transparent 51%),
+   radial-gradient(1px 1px at 30% 80%,#fff6 50%,transparent 51%),
+   radial-gradient(1px 1px at 55% 40%,#fff5 50%,transparent 51%),
+   radial-gradient(1px 1px at 5% 55%,#fff6 50%,transparent 51%),
+   radial-gradient(ellipse at 85% -5%,#2A2766 0%,transparent 50%),
+   radial-gradient(ellipse at 0% 100%,#0F3A44 0%,transparent 45%),
+   var(--bg);
+  background-attachment:fixed}
+a{color:var(--amber);text-underline-offset:3px}
+a:hover{color:var(--teal)}
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+h1,h2,h3{font-family:var(--head);line-height:1.15;margin:0}
+.wrap{max-width:64rem;margin:0 auto;padding:0 1.5rem}
+.ic{width:1.5rem;height:1.5rem;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.sprite{position:absolute;width:0;height:0}
+
+/* taskbar */
+.bar{position:sticky;top:0;z-index:10;background:#080C1Acc;backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;gap:.2rem;padding-top:.55rem;padding-bottom:.55rem;overflow-x:auto}
+.brand{font:700 1rem var(--head);color:var(--ink);text-decoration:none;margin-right:auto;padding:.4rem .8rem .4rem 0;white-space:nowrap}
+.bar a.tab{font:500 .9rem var(--head);color:var(--muted);text-decoration:none;padding:.45rem .75rem;border-radius:6px;white-space:nowrap}
+.bar a.tab:hover{color:var(--ink);background:var(--panel)}
+.bar a.tab[aria-current="page"]{color:#1a1200;background:var(--amber)}
+
+/* pages */
+.page{display:none;padding:3rem 0 4rem}
+.page.on{display:block;animation:in .35s ease both}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.page.on{animation:none}html{scroll-behavior:auto}}
+.back{font:500 .9rem var(--head);color:var(--muted);text-decoration:none;display:inline-block;margin-bottom:1.5rem}
+.back:hover{color:var(--amber)}
+.ph{display:flex;gap:1rem;align-items:center;margin-bottom:.6rem}
+.ph .badge{width:3.2rem;height:3.2rem;border-radius:50%;border:1.5px solid var(--amber);color:var(--amber);display:grid;place-items:center;box-shadow:0 0 24px #F0B04A22}
+.ph h1{font-size:clamp(2rem,5vw,3rem)}
+.sub{color:var(--muted);margin:0 0 2.25rem;max-width:40rem}
+
+/* home */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:2rem;align-items:center;padding-top:1rem}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:700;letter-spacing:-.02em}
+.role{font:500 1.05rem var(--head);color:var(--teal);margin:.6rem 0 0}
+.lead{font-size:1.15rem;max-width:33rem;margin:1.1rem 0 1.75rem;color:#C6CEDF}
+.btns{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{font:500 1rem var(--head);padding:.65rem 1.1rem;border:1.5px solid var(--line);color:var(--ink);border-radius:6px;text-decoration:none}
+.btn:hover{border-color:var(--teal);color:var(--teal)}
+.btn.primary{background:var(--amber);border-color:var(--amber);color:#1a1200}
+.btn.primary:hover{background:var(--teal);border-color:var(--teal);color:#06201e}
+.orb{position:relative;width:100%;max-width:30rem;margin:0 auto}
+.orb::before{content:"";position:absolute;inset:12%;border-radius:50%;background:radial-gradient(circle,#7C6CF033,transparent 70%)}
+#galaxy{position:relative;width:100%;aspect-ratio:1;display:block;touch-action:pan-y}
+.photo{position:absolute;left:50%;top:50%;width:30%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;
+  border:2px solid var(--amber);box-shadow:0 0 40px #F0B04A44;overflow:hidden;background:var(--panel);display:grid;place-items:center}
+.photo span{font:700 2.2rem var(--head);color:var(--amber)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cap{font-size:.82rem;color:var(--muted);text-align:center;margin:.25rem 0 0}
+.explore{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:3.5rem}
+.explore a{display:block;padding:1.3rem;border:1px solid var(--line);border-radius:12px;background:#10172D99;text-decoration:none;color:var(--ink);transition:border-color .2s,transform .2s}
+.explore a:hover{border-color:var(--amber);transform:translateY(-3px)}
+.explore .badge{width:2.9rem;height:2.9rem;border-radius:50%;border:1.5px solid var(--line);color:var(--amber);display:grid;place-items:center;margin-bottom:.9rem}
+.explore a:hover .badge{border-color:var(--amber)}
+.explore b{font:500 1.1rem var(--head);display:block}
+.explore span.d{font-size:.92rem;color:var(--muted);line-height:1.45;display:block;margin-top:.15rem}
+
+/* content */
+.item{margin-bottom:2rem;padding-left:1.1rem;border-left:2px solid var(--line)}
+.item:hover{border-left-color:var(--amber)}
+.item h3{font-size:1.15rem;font-weight:500}
+.meta{color:var(--muted);font-size:.95rem;margin:.15rem 0 .45rem}
+.item p{margin:0 0 .4rem}
+ul{margin:.4rem 0 0;padding-left:1.1rem}
+li{margin:.3rem 0}
+.cols{columns:2;column-gap:2.5rem}
+.cols li{break-inside:avoid}
+.pill{display:inline-block;border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:.1rem .75rem;margin:.2rem .3rem .2rem 0;font-size:.92rem}
+em{font-style:italic}
+footer{border-top:1px solid var(--line);padding:1.5rem 0 2.5rem;color:var(--muted);font-size:.9rem}
+@media (max-width:900px){.explore{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:760px){.hero{grid-template-columns:1fr}.cols{columns:1}}
+@media (max-width:420px){.explore{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<svg class="sprite" aria-hidden="true"><defs>
+<symbol id="i-about" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></symbol>
+<symbol id="i-teaching" viewBox="0 0 24 24"><path d="M3 11l13-5 2.2 5.5L5.2 16.5z"/><path d="M10 14l-2 7M11 14l4 7M19 8l2-1"/></symbol>
+<symbol id="i-research" viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/></symbol>
+<symbol id="i-projects" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><ellipse cx="12" cy="12" rx="10.5" ry="3.2" transform="rotate(-20 12 12)"/></symbol>
+<symbol id="i-writing" viewBox="0 0 24 24"><path d="M4 20l1-4L17 4l3 3L8 19z"/><path d="M14 7l3 3"/></symbol>
+<symbol id="i-recognition" viewBox="0 0 24 24"><polygon points="12 2 15 9 22 9.5 16.5 14 18.5 21 12 17 5.5 21 7.5 14 2 9.5 9 9"/></symbol>
+<symbol id="i-leadership" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polygon points="15.5 8.5 13.5 13.5 8.5 15.5 10.5 10.5"/></symbol>
+<symbol id="i-contact" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+</defs></svg>
+
+<header class="bar">
+  <nav class="wrap" aria-label="Main">
+    <a class="brand" href="#home">Vithushan N.</a>
+    <a class="tab" href="#home">Home</a>
+    <a class="tab" href="#about">About</a>
+    <a class="tab" href="#teaching">Teaching</a>
+    <a class="tab" href="#research">Research</a>
+    <a class="tab" href="#projects">Projects</a>
+    <a class="tab" href="#writing">Writing</a>
+    <a class="tab" href="#recognition">Recognition</a>
+    <a class="tab" href="#leadership">Leadership</a>
+    <a class="tab" href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<!-- HOME -->
+<div class="page" id="home"><div class="wrap">
+  <div class="hero">
+    <div>
+      <h1>Vithushan Nallanathan</h1>
+      <p class="role">Physics graduate, demonstrator and visiting lecturer</p>
+      <p class="lead">I studied Physics with Mathematics at the University of Peradeniya. I teach astronomy and mathematics, measure natural radioactivity along Sri Lanka's coast, and write about the universe for anyone curious enough to read.</p>
+      <div class="btns">
+        <a class="btn primary" href="#research">Read my research</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <figure style="margin:0">
+      <div class="orb">
+        <canvas id="galaxy" role="img" aria-label="Animated 3D spiral galaxy of stars rotating around your portrait. Move the pointer to tilt it."></canvas>
+        <div class="photo"><span>VN</span><img src="profile.jpg" alt="Portrait of Vithushan Nallanathan" onerror="this.remove()"></div>
+      </div>
+      <figcaption class="cap">A spiral galaxy of 3,200 stars. Inner stars circle faster than outer ones, as in real galaxies. Move your pointer over it to tilt the view.</figcaption>
+    </figure>
+  </div>
+  <div class="explore">
+    <a href="#about"><div class="badge"><svg class="ic"><use href="#i-about"/></svg></div><b>About</b><span class="d">Education, skills and background</span></a>
+    <a href="#teaching"><div class="badge"><svg class="ic"><use href="#i-teaching"/></svg></div><b>Teaching</b><span class="d">University lecturing, labs and school seminars</span></a>
+    <a href="#research"><div class="badge"><svg class="ic"><use href="#i-research"/></svg></div><b>Research</b><span class="d">Natural radioactivity and astrophysics education</span></a>
+    <a href="#projects"><div class="badge"><svg class="ic"><use href="#i-projects"/></svg></div><b>Projects</b><span class="d">Wellbeing, outreach and youth programmes</span></a>
+    <a href="#writing"><div class="badge"><svg class="ic"><use href="#i-writing"/></svg></div><b>Writing</b><span class="d">Science articles and short fiction</span></a>
+    <a href="#recognition"><div class="badge"><svg class="ic"><use href="#i-recognition"/></svg></div><b>Recognition</b><span class="d">Awards in science, speaking and maths</span></a>
+    <a href="#leadership"><div class="badge"><svg class="ic"><use href="#i-leadership"/></svg></div><b>Leadership</b><span class="d">Clubs and student roles</span></a>
+    <a href="#contact"><div class="badge"><svg class="ic"><use href="#i-contact"/></svg></div><b>Contact</b><span class="d">Email, LinkedIn and GitHub</span></a>
+  </div>
+</div></div>
+
+<!-- ABOUT -->
+<div class="page" id="about"><div class="wrap">
+  <a class="back" href="#home">Back to home</a>
+  <div class="ph"><div class="badge"><svg class="ic"><use href="#i-about"/></svg></div><h1>About</h1></div>
+  <p class="sub">Education, skills and what I'm looking for.</p>
+  <div class="item"><h3>BSc (Hons) in Physics with Mathematics</h3>
+    <p class="meta">University of Peradeniya, 2025. Second Class Upper, GPA 3.64/4.00</p>
+    <p>GPA 3.72/4.00 in Mathematics at the end of second year. Coursework included astrophysics, quantum mechanics, special and general relativity, nuclear physics, electromagnetism, nano science, classical mechanics, differential equations, real analysis, abstract algebra and numerical analysis.</p></div>
+  <div class="item"><h3>What I do</h3>
+    <p>I enjoy explaining hard ideas clearly, whether to first-year undergraduates, A/L students or a general audience. I also write short fiction. I'm looking to contribute to research, teaching and science outreach.</p></div>
+  <div class="item"><h3>Skills</h3>
+    <p><span class="pill">Astrophysics</span><span class="pill">Nuclear physics</span><span class="pill">Gamma-ray spectroscopy</span><span class="pill">Mathematical modelling</span><span class="pill">Python</span><span class="pill">Origin</span><span class="pill">SPSS</span><span class="pill">Scientific writing</span><span class="pill">Public speaking</span><span class="pill">Event planning</span></p></div>
+  <div class="item"><h3>Courses</h3>
+    <p>From Big Bang to Dark Energy (University of Tokyo) and The Science of Well-Being (Yale), both on Coursera.</p></div>
+</div></div>
+
+<!-- TEACHING -->
+<div class="page" id="teaching"><div class="wrap">
+  <a class="back" href="#home">Back to home</a>
+  <div class="ph"><div class="badge"><svg class="ic"><use href="#i-teaching"/></svg></div><h1>Teaching</h1></div>
+  <p class="sub">University lecturing, laboratory demonstrating and school seminars.</p>
+  <div class="item"><h3>Visiting Lecturer, SLIIT Kandy Uni</h3>
+    <p class="meta">July to August 2026</p>
+    <p>Delivered the 60-hour module MA0014 Foundational Mathematics: algebraic fractions, trigonometry, statistics, differentiation, integration, simultaneous equations, partial fractions, matrices, functions, and logarithmic and exponential functions. Prepared lecture materials and assignments.</p></div>
+  <div class="item"><h3>Temporary Demonstrator, Department of Physics, University of Peradeniya</h3>
+    <p class="meta">March 2026 to present</p>
+    <ul>
+      <li>Lead problem-solving lectures and write tutorials for PHY2812 Introductory Astronomy: geostationary orbits, Kepler's laws, Olbers' paradox, surface temperature equilibrium of Earth and Venus, the electromagnetic spectrum, black holes, stellar evolution and escape velocity.</li>
+      <li>Plan and run practicals: Resonance Tube and Sonometer (PHY1911), IRAF and Gamma Ray Spectroscopy and Geiger-Müller Counter (Advanced Laboratory), Young's Modulus of a Copper Wire (2000L).</li>
+      <li>Mark assignments for PHY3812 Astrophysics, Introductory Nano Science and General Physics 1.</li>
+    </ul></div>
+  <div class="item"><h3>Physics seminar teacher, "Elluththayutham"</h3>
+    <p class="meta">Tamil Society, University of Peradeniya, 2022 to 2023</p>
+    <p>Ran A/L Physics revision seminars at J/Bandarawela Tamil Central College (twice), J/Sarasawi Central College and J/Mathina National College, focused on the topics students found hardest.</p></div>
+  <div class="item"><h3>Project Officer Trainee, Career Guidance Unit</h3>
+    <p class="meta">Faculty of Science, University of Peradeniya, Sept 2024 to Mar 2025 and June to Nov 2025</p>
+    <p>Started and managed projects supporting the academic and mental wellbeing of Faculty of Science students.</p></div>
+</div></div>
+
+<!-- RESEARCH -->
+<div class="page" id="research"><div class="wrap">
+  <a class="back" href="#home">Back to home</a>
+  <div class="ph"><div class="badge"><svg class="ic"><use href="#i-research"/></svg></div><h1>Research</h1></div>
+  <p class="sub">Radioactivity measurement and astrophysics education.</p>
+  <div class="item"><h3>Natural Radioactivity Along the Coastal Areas in Jaffna</h3>
+    <p class="meta">Undergraduate thesis, 2025. Supervisor: Dr. T. P. Ranawaka</p>
+    <p>Measured and analysed natural radioactivity along Jaffna's coast using in-situ methods and gamma-ray spectroscopy, and assessed the implications. Abstract published in the proceedings of iPurse 2026, University of Peradeniya, with T. P. Ranawaka.</p>
+    <p>I also took this work to the public. My 3-minute video on detecting natural background radiation was Runner Up at the SLAAS competition in 2025.</p></div>
+  <div class="item"><h3>Level of Interest and Engagement in Astrophysics among Undergraduate Students in Sri Lanka</h3>
+    <p class="meta">Abstract, RESCON 2025, Postgraduate Institute of Science, University of Peradeniya</p>
+    <p>With C. M. Niranjan and T. P. Ranawaka.</p></div>
+</div></div>
+
+<!-- PROJECTS -->
+<div class="page" id="projects"><div class="wrap">
+  <a class="back" href="#home">Back to home</a>
+  <div class="ph"><div class="badge"><svg class="ic"><use href="#i-projects"/></svg></div><h1>Projects</h1></div>
+  <p class="sub">Programmes I planned, chaired or helped run for students and school communities.</p>
+  <div class="item"><h3>Healing Mind</h3>
+    <p class="meta">Project Chair, Wellness Circle, 2025</p>
+    <p>A programme helping undergraduates manage stress and lift their spirits during university life.</p></div>
+  <div class="item"><h3>Flex and Flow</h3>
+    <p class="meta">Organising Committee, Wellness Circle, 2025</p>
+    <p>Yoga sessions for staff and students to improve spiritual wellbeing.</p></div>
+  <div class="item"><h3>Insight Ignite</h3>
+    <p class="meta">Moderator and Organiser, International Interaction Club, 2024</p>
+    <p>A session for J/Hartley College students on communication and interpersonal skills.</p></div>
+  <div class="item"><h3>Women's Day Programme</h3>
+    <p class="meta">Resource person and Organising Committee, International Interaction Club, 2024</p>
+    <p>An empowerment programme for students of K/Kathiresan Hindu Ladies College.</p></div>
+  <div class="item"><h3>Hill Country Youth Peace Summit</h3>
+    <p class="meta">Tamil Moderator and Delegate Management, 2023</p>
+    <p>The first summit of its kind in the Central Province, building leadership and interpersonal skills in young people.</p></div>
+  <div class="item"><h3>Huddle (S19 to S23)</h3>
+    <p class="meta">Organising Committee, SAAC, University of Peradeniya</p>
+    <p>Orientation programmes introducing new Faculty of Science undergraduates to university life.</p></div>
+  <div class="item"><h3>International Interaction Week 2022</h3>
+    <p class="meta">Representative of the University of Turku, Finland</p>
+    <p>Told Faculty of Science students about study opportunities at the University of Turku.</p></div>
+</div></div>
+
+<!-- WRITING -->
+<div class="page" id="writing"><div class="wrap">
+  <a class="back" href="#home">Back to home</a>
+  <div class="ph"><div class="badge"><svg class="ic"><use href="#i-writing"/></svg></div><h1>Writing</h1></div>
+  <p class="sub">Science for general readers, and stories.</p>
+  <div class="item"><h3>Science articles</h3>
+    <ul>
+      <li><em>The Biological Foundations of Astrobiology</em>, Protect Nature, Vol. 5, Zoologists' Association of the University of Peradeniya (2025)</li>
+      <li><em>The Natural Background Radiation Detection Methods: How do we detect the invisible?</em>, IPSL magazine (2025)</li>
+      <li><em>The Mathematical Pathways to Multiverse</em>, Mathema, Mathematical Society of the University of Peradeniya (under review)</li>
+    </ul></div>
+  <div class="item"><h3>Short fiction</h3>
+    <p class="meta">Literati, Department of English Language Teaching, University of Peradeniya</p>
+    <ul>
+      <li><em>The Rings of Shadows</em>, Vol. 1 (2021)</li>
+      <li><em>Pandemic World After Corona</em>, Vol. 2 (2022)</li>
+      <li><em>3 Points</em>, Vol. 4 (2024)</li>
+    </ul></div>
+</div></div>
+
+<!-- RECOGNITION -->
+<div class="page" id="recognition"><div class="wrap">
+  <a class="back" href="#home">Back to home</a>
+  <div class="ph"><div class="badge"><svg class="ic"><use href="#i-recognition"/></svg></div><h1>Recognition</h1></div>
+  <p class="sub">Competitions and awards, newest first.</p>
+  <ul class="cols">
+    <li>Runner Up, SLAAS 3-minute video competition (2025): <em>How do we detect the invisible?</em></li>
+    <li>Silver Honors, International Astronomy and Astrophysics Competition, final round (2025)</li>
+    <li>First Runner Up, Speak Out Central Province, Edith Cowan University (2025)</li>
+    <li>Best Ice Breaker Speech and Best Educational Segment, Speech Craft 2025</li>
+    <li>Second Runner Up, Chess and 4×100m relay, Scieclash 2025</li>
+    <li>Finalist, Spell Binders, Wayamba University (2024)</li>
+    <li>Second Runner Up, AFELA Creative Series short stories (2024)</li>
+    <li>Merit, IAAMC Olympiad national level (2016)</li>
+    <li>High Distinction, National Mathematical Olympiad (2015)</li>
+    <li>Runner Up, Provincial Creative Writing Competition (2014)</li>
+    <li>Winner, Provincial Mathematics Competition (2011)</li>
+  </ul>
+</div></div>
+
+<!-- LEADERSHIP -->
+<div class="page" id="leadership"><div class="wrap">
+  <a class="back" href="#home">Back to home</a>
+  <div class="ph"><div class="badge"><svg class="ic"><use href="#i-leadership"/></svg></div><h1>Leadership</h1></div>
+  <p class="sub">Clubs and student roles at the University of Peradeniya.</p>
+  <div class="item"><h3>Positions held</h3>
+    <ul>
+      <li>President, Gavel Club (2023 to 2024)</li>
+      <li>President, International Interaction Club (2023 to 2024)</li>
+      <li>Vice President, Students for Exploration and Development of Space (2024 to 2025)</li>
+      <li>Director of Social Wellness, Wellness Circle (2024 to 2025)</li>
+      <li>Ambassador, International Astronomy and Astrophysics Competition (2020 to present)</li>
+      <li>Student Representative, SAAC, Faculty of Science (2022 to 2025)</li>
+      <li>Team Leader, AIESEC Kandy (2022 to 2023)</li>
+      <li>Senior Prefect, J/Hartley College (2018 to 2019)</li>
+    </ul></div>
+</div></div>
+
+<!-- CONTACT -->
+<div class="page" id="contact"><div class="wrap">
+  <a class="back" href="#home">Back to home</a>
+  <div class="ph"><div class="badge"><svg class="ic"><use href="#i-contact"/></svg></div><h1>Contact</h1></div>
+  <p class="sub">For teaching, research collaboration, talks or science writing.</p>
+  <div class="item"><h3>Reach me</h3>
+    <p><a href="mailto:nallanathanvithushan2000@gmail.com">nallanathanvithushan2000@gmail.com</a></p>
+    <p><a href="https://www.linkedin.com/in/vithushan-nallanathan-6a6003230">LinkedIn</a> · <a href="https://github.com/nallanathanvithushan2000">GitHub</a></p></div>
+  <div class="item"><h3>Academic reference</h3>
+    <p>Dr. T. P. Ranawaka, Lecturer, Department of Physics, University of Peradeniya<br>tpranawaka@sci.pdn.ac.lk</p></div>
+</div></div>
+</main>
+
+<footer><div class="wrap">© <span id="yr">2026</span> Vithushan Nallanathan</div></footer>
+
+<script>
+(function(){
+  var pages=[].slice.call(document.querySelectorAll('.page')),
+      tabs=[].slice.call(document.querySelectorAll('a.tab'));
+  function show(){
+    var id=(location.hash||'#home').slice(1),e=document.getElementById(id);
+    if(!e||!e.classList.contains('page'))id='home';
+    pages.forEach(function(p){p.classList.toggle('on',p.id===id)});
+    tabs.forEach(function(t){
+      if(t.getAttribute('href')==='#'+id)t.setAttribute('aria-current','page');else t.removeAttribute('aria-current');
+    });
+    document.title=(id==='home'?'':id.charAt(0).toUpperCase()+id.slice(1)+' | ')+'Vithushan Nallanathan';
+    window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange',show);show();
+
+  var cv=document.getElementById('galaxy'),cx=cv.getContext('2d'),P=[],S=0,dpr=Math.min(window.devicePixelRatio||1,2);
+  function rnd(){return Math.random()}
+  function gs(){return(rnd()+rnd()+rnd()+rnd()-2)/2}
+  var cols=['#FFE2B0','#F0B04A','#5CC8C0','#8FB8FF','#9B8CFF'];
+  for(var i=0;i<3200;i++){
+    var halo=i%8===0,r=halo?rnd()*1.05:Math.pow(rnd(),.7)*.97+.03;
+    var a=(i%4)*1.5708+r*5.2+gs()*(halo?3:.5-.28*r);
+    var c=r<.28?0:r<.55?(rnd()<.6?1:0):(rnd()<.5?2:rnd()<.5?3:4);
+    P.push({r:r,a:a,h:gs()*(halo?.3:.07*(1.2-r)),c:cols[c],al:halo?.25:.45+rnd()*.5,sz:halo?.9:.8+rnd()*1.3});
+  }
+  var tx=0,ty=0,cxs=0,cys=0,still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var orb=cv.parentNode;
+  orb.addEventListener('pointermove',function(e){var b=orb.getBoundingClientRect();tx=(e.clientX-b.left)/b.width*2-1;ty=(e.clientY-b.top)/b.height*2-1});
+  orb.addEventListener('pointerleave',function(){tx=0;ty=0});
+  function draw(t){
+    var w=cv.clientWidth;if(!w)return;
+    if(w!==S){S=w;cv.width=cv.height=Math.round(w*dpr)}
+    cxs+=(tx-cxs)*.06;cys+=(ty-cys)*.06;
+    var W=cv.width,R=W*.47,yaw=cxs*.55+Math.sin(t/2600)*.12,tilt=.95+cys*.5,
+        ct=Math.cos(tilt),st=Math.sin(tilt),cy=Math.cos(yaw),sy=Math.sin(yaw);
+    cx.globalCompositeOperation='source-over';cx.globalAlpha=1;cx.clearRect(0,0,W,W);
+    var g=cx.createRadialGradient(W/2,W/2,0,W/2,W/2,R*.55);
+    g.addColorStop(0,'rgba(240,176,74,.4)');g.addColorStop(1,'rgba(240,176,74,0)');
+    cx.fillStyle=g;cx.fillRect(0,0,W,W);
+    cx.globalCompositeOperation='lighter';
+    for(var i=0;i<P.length;i++){
+      var p=P[i],ang=p.a+t*.00014/(.22+p.r),x=p.r*Math.cos(ang),y=p.r*Math.sin(ang),z=p.h;
+      var y2=y*ct-z*st,z2=y*st+z*ct,x3=x*cy+z2*sy,z3=-x*sy+z2*cy,k=1/(1+z3*.55);
+      cx.globalAlpha=Math.min(1,p.al*(.55+.6*k));
+      cx.fillStyle=p.c;var q=p.sz*dpr*k;
+      cx.fillRect(W/2+x3*R*k-q/2,W/2+y2*R*k-q/2,q,q);
+    }
+  }
+  draw(0);
+  window.addEventListener('resize',function(){draw(performance.now())});
+  if(!still)(function l(t){draw(t);requestAnimationFrame(l)})(0);
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
