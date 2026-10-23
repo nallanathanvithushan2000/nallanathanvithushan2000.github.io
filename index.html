@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vithushan Nallanathan | Physics, Astronomy and Science Communication</title>
+<meta name="description" content="Physics graduate, university demonstrator and visiting lecturer. Astrophysics, radioactivity research, science writing and public speaking.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪐</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F4F8; --ink:#16233B; --muted:#55627A; --line:#CBD3E1; --accent:#B87410; --panel:#E6EAF2;
+  --head:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0F1729; --ink:#E6EAF2; --muted:#9AA6BD; --line:#2A3654; --accent:#E8A83A; --panel:#17213A}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--body)}
+a{color:var(--ink);text-decoration-color:var(--accent);text-underline-offset:3px}
+a:hover{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+h1,h2,h3{font-family:var(--head);line-height:1.15;margin:0}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.5rem}
+nav{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+nav .wrap{display:flex;gap:1.25rem;align-items:center;overflow-x:auto;padding-top:.75rem;padding-bottom:.75rem;white-space:nowrap}
+nav b{font-family:var(--head);margin-right:auto}
+nav a{font-family:var(--head);font-size:.9rem;text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center;padding:4rem 0 3rem}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:700;letter-spacing:-.02em}
+.hero p.lead{font-size:1.2rem;max-width:34rem;margin:1.25rem 0 1.75rem}
+.btns{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{font-family:var(--head);font-weight:500;padding:.65rem 1.1rem;border:1.5px solid var(--ink);border-radius:4px;text-decoration:none}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn.primary:hover{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.btn:hover{border-color:var(--accent)}
+#orrery{width:100%;height:auto;display:block}
+#orrery .ring{fill:none;stroke:var(--line);stroke-width:1}
+#orrery .sun{fill:var(--accent)}
+#orrery text{font:500 10px var(--head);fill:var(--muted)}
+.cap{font-size:.85rem;color:var(--muted);margin:.25rem 0 0;text-align:center}
+section{padding:3rem 0;border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:12rem 1fr;gap:2rem}
+.row>h2{font-size:1.35rem}
+.item{margin-bottom:1.75rem}
+.item:last-child{margin-bottom:0}
+.item h3{font-size:1.1rem;font-weight:500}
+.meta{color:var(--muted);font-size:.95rem;margin:.1rem 0 .4rem}
+ul{margin:.4rem 0 0;padding-left:1.1rem}
+li{margin:.25rem 0}
+.cols{columns:2;column-gap:2rem}
+.cols li{break-inside:avoid}
+em{font-style:italic}
+footer{border-top:1px solid var(--line);padding:2rem 0 3rem;color:var(--muted);font-size:.9rem}
+.pill{display:inline-block;border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:.1rem .7rem;margin:.2rem .25rem .2rem 0;font-size:.92rem}
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;padding-top:2.5rem}
+  .row{grid-template-columns:1fr;gap:1rem}
+  .cols{columns:1}
+}
+</style>
+</head>
+<body>
+<nav aria-label="Main">
+  <div class="wrap">
+    <b>V. Nallanathan</b>
+    <a href="#teaching">Teaching</a>
+    <a href="#research">Research</a>
+    <a href="#writing">Writing</a>
+    <a href="#recognition">Recognition</a>
+    <a href="#leadership">Leadership</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<main class="wrap">
+  <header class="hero">
+    <div>
+      <h1>Vithushan Nallanathan</h1>
+      <p class="lead">Physics graduate from the University of Peradeniya. I teach astronomy and mathematics, research natural radioactivity, and write about science for general readers.</p>
+      <div class="btns">
+        <a class="btn primary" href="mailto:nallanathanvithushan2000@gmail.com">Email me</a>
+        <a class="btn" href="#research">Read my research</a>
+      </div>
+    </div>
+    <figure style="margin:0">
+      <svg id="orrery" viewBox="-170 -170 340 340" role="img" aria-label="Animated diagram of Mercury, Venus, Earth and Mars orbiting the Sun, with speeds following Kepler's third law"></svg>
+      <figcaption class="cap">Inner planets orbiting at speeds set by Kepler's third law (T² ∝ a³). Not to scale in size.</figcaption>
+    </figure>
+  </header>
+
+  <section id="about">
+    <div class="row">
+      <h2>About</h2>
+      <div>
+        <p style="margin-top:0">I completed a BSc (Hons) in Physics with Mathematics at the University of Peradeniya, graduating in 2025 with Second Class Upper Honours (GPA 3.64/4.00; 3.72 in Mathematics at the end of second year).</p>
+        <p>I enjoy explaining hard ideas clearly, whether to first-year undergraduates, A/L students or a general audience. I also write short fiction. I am looking to contribute to research, teaching and science outreach.</p>
+        <p><span class="pill">Astrophysics</span><span class="pill">Nuclear physics</span><span class="pill">Gamma-ray spectroscopy</span><span class="pill">Mathematical modelling</span><span class="pill">Python</span><span class="pill">Origin</span><span class="pill">SPSS</span><span class="pill">Scientific writing</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="teaching">
+    <div class="row">
+      <h2>Teaching and experience</h2>
+      <div>
+        <div class="item">
+          <h3>Visiting Lecturer, SLIIT Kandy Uni</h3>
+          <p class="meta">July to August 2026</p>
+          <p style="margin:0">Delivered the 60-hour module MA0014 Foundational Mathematics: algebraic fractions, trigonometry, statistics, differentiation, integration, simultaneous equations, partial fractions, matrices, functions, and logarithmic and exponential functions. Prepared lecture materials and assignments.</p>
+        </div>
+        <div class="item">
+          <h3>Temporary Demonstrator, Department of Physics, University of Peradeniya</h3>
+          <p class="meta">March 2026 to present</p>
+          <ul>
+            <li>Lead problem-solving lectures and write tutorials for PHY2812 Introductory Astronomy: geostationary orbits, Kepler's laws, Olbers' paradox, surface temperature equilibrium of Earth and Venus, the electromagnetic spectrum, black holes, stellar evolution and escape velocity.</li>
+            <li>Plan and run practicals: Resonance Tube and Sonometer (PHY1911), IRAF and Gamma Ray Spectroscopy and Geiger-Müller Counter (Advanced Laboratory), Young's Modulus of a Copper Wire (2000L).</li>
+            <li>Mark assignments for PHY3812 Astrophysics, Introductory Nano Science and General Physics 1.</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h3>Physics seminar teacher, "Elluththayutham"</h3>
+          <p class="meta">Tamil Society, University of Peradeniya, 2022 to 2023</p>
+          <p style="margin:0">Ran A/L Physics revision seminars at J/Bandarawela Tamil Central College (twice), J/Sarasawi Central College and J/Mathina National College, focused on the topics students found hardest.</p>
+        </div>
+        <div class="item">
+          <h3>Project Officer Trainee, Career Guidance Unit</h3>
+          <p class="meta">Faculty of Science, University of Peradeniya, Sept 2024 to Mar 2025 and June to Nov 2025</p>
+          <p style="margin:0">Started and managed projects supporting the academic and mental wellbeing of Faculty of Science students.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="research">
+    <div class="row">
+      <h2>Research</h2>
+      <div>
+        <div class="item">
+          <h3>Natural Radioactivity Along the Coastal Areas in Jaffna</h3>
+          <p class="meta">Undergraduate thesis, 2025. Supervisor: Dr. T. P. Ranawaka</p>
+          <p style="margin:0">Measured and analysed natural radioactivity along Jaffna's coast using in-situ methods and gamma-ray spectroscopy, and assessed the implications. Abstract published in the proceedings of iPurse 2026, University of Peradeniya, with T. P. Ranawaka.</p>
+        </div>
+        <div class="item">
+          <h3>Level of Interest and Engagement in Astrophysics among Undergraduate Students in Sri Lanka</h3>
+          <p class="meta">Abstract, RESCON 2025, Postgraduate Institute of Science, University of Peradeniya</p>
+          <p style="margin:0">With C. M. Niranjan and T. P. Ranawaka.</p>
+        </div>
+        <div class="item">
+          <h3>Coursework behind the work</h3>
+          <p style="margin:0">Quantum mechanics, special and general relativity, nuclear physics, theory of electromagnetism, advanced nano science, classical mechanics, differential equations, real analysis, abstract algebra and numerical analysis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="writing">
+    <div class="row">
+      <h2>Writing</h2>
+      <div>
+        <div class="item">
+          <h3>Science articles</h3>
+          <ul>
+            <li><em>The Biological Foundations of Astrobiology</em>, Protect Nature, Vol. 5, Zoologists' Association of the University of Peradeniya (2025)</li>
+            <li><em>The Natural Background Radiation Detection Methods: How do we detect the invisible?</em>, IPSL magazine (2025)</li>
+            <li><em>The Mathematical Pathways to Multiverse</em>, Mathema, Mathematical Society of the University of Peradeniya (under review)</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h3>Short fiction</h3>
+          <p class="meta">Literati, Department of English Language Teaching, University of Peradeniya</p>
+          <ul>
+            <li><em>The Rings of Shadows</em>, Vol. 1 (2021)</li>
+            <li><em>Pandemic World After Corona</em>, Vol. 2 (2022)</li>
+            <li><em>3 Points</em>, Vol. 4 (2024)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="recognition">
+    <div class="row">
+      <h2>Recognition</h2>
+      <div>
+        <ul class="cols" style="margin-top:0">
+          <li>Runner Up, SLAAS 3-minute video competition (2025): <em>How do we detect the invisible?</em></li>
+          <li>Silver Honors, International Astronomy and Astrophysics Competition, final round (2025)</li>
+          <li>First Runner Up, Speak Out Central Province, Edith Cowan University (2025)</li>
+          <li>Best Ice Breaker Speech and Best Educational Segment, Speech Craft 2025</li>
+          <li>Second Runner Up, Chess and 4×100m relay, Scieclash 2025</li>
+          <li>Finalist, Spell Binders, Wayamba University (2024)</li>
+          <li>Second Runner Up, AFELA Creative Series short stories (2024)</li>
+          <li>Merit, IAAMC Olympiad national level (2016)</li>
+          <li>High Distinction, National Mathematical Olympiad (2015)</li>
+          <li>Runner Up, Provincial Creative Writing Competition (2014)</li>
+          <li>Winner, Provincial Mathematics Competition (2011)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="leadership">
+    <div class="row">
+      <h2>Leadership and outreach</h2>
+      <div>
+        <ul style="margin-top:0">
+          <li>President, Gavel Club (2023 to 2024) and International Interaction Club (2023 to 2024)</li>
+          <li>Vice President, Students for Exploration and Development of Space (2024 to 2025)</li>
+          <li>Director of Social Wellness, Wellness Circle (2024 to 2025)</li>
+          <li>Ambassador, International Astronomy and Astrophysics Competition (2020 to present)</li>
+          <li>Project Chair, <em>Healing Mind</em>: a stress-management programme for undergraduates (2025)</li>
+          <li>Organiser, <em>Flex and Flow</em> yoga wellbeing programme (2025)</li>
+          <li>Moderator and organiser, <em>Insight Ignite</em>: communication skills for school students (2024)</li>
+          <li>Moderator and delegate management, Hill Country Youth Peace Summit (2023)</li>
+          <li>Student Representative, SAAC, Faculty of Science (2022 to 2025)</li>
+        </ul>
+        <p class="meta" style="margin-top:1rem">Courses: From Big Bang to Dark Energy (University of Tokyo), The Science of Well-Being (Yale), both on Coursera.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="row">
+      <h2>Contact</h2>
+      <div>
+        <p style="margin-top:0">For teaching, research collaboration, talks or science writing:</p>
+        <p><a href="mailto:nallanathanvithushan2000@gmail.com">nallanathanvithushan2000@gmail.com</a><br>
+        <a href="https://www.linkedin.com/in/vithushan-nallanathan-6a6003230">LinkedIn</a> · <a href="https://github.com/nallanathanvithushan2000">GitHub</a></p>
+        <p class="meta">Academic reference: Dr. T. P. Ranawaka, Lecturer, Department of Physics, University of Peradeniya (tpranawaka@sci.pdn.ac.lk).</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="yr">2026</span> Vithushan Nallanathan</div>
+</footer>
+
+<script>
+(function(){
+  var svg=document.getElementById('orrery'),NS='http://www.w3.org/2000/svg';
+  var planets=[{n:'Mercury',a:.39},{n:'Venus',a:.72},{n:'Earth',a:1},{n:'Mars',a:1.52}];
+  var K=100; // px per AU
+  function el(t,attrs,parent){var e=document.createElementNS(NS,t);for(var k in attrs)e.setAttribute(k,attrs[k]);(parent||svg).appendChild(e);return e}
+  planets.forEach(function(p){
+    p.r=p.a*K;
+    el('circle',{'class':'ring',cx:0,cy:0,r:p.r});
+    p.dot=el('circle',{r:p.n==='Earth'?5:4,fill:p.n==='Earth'?'var(--accent)':'var(--ink)'});
+    p.dot.appendChild(document.createElementNS(NS,'title')).textContent=p.n;
+    p.T=Math.pow(p.a,1.5); // years, Kepler's third law
+    p.phase=Math.random()*Math.PI*2;
+  });
+  el('circle',{'class':'sun',cx:0,cy:0,r:9});
+  el('text',{x:0,y:-K*1.52-6,'text-anchor':'middle'}).textContent='Mars';
+  el('text',{x:0,y:-K-6,'text-anchor':'middle'}).textContent='Earth';
+  var secPerYear=12;
+  function draw(t){
+    planets.forEach(function(p){
+      var ang=p.phase+2*Math.PI*(t/1000/secPerYear)/p.T;
+      p.dot.setAttribute('cx',(p.r*Math.cos(ang)).toFixed(2));
+      p.dot.setAttribute('cy',(p.r*Math.sin(ang)).toFixed(2));
+    });
+  }
+  draw(0);
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    (function loop(t){draw(t);requestAnimationFrame(loop)})(0);
+  }
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
